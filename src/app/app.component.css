@@ -1,0 +1,11 @@
+
+section{
+    margin: 25px;
+    padding: 25px;
+    background-color: #EEE;
+}
+
+
+.active{
+    background-color: #CCC;
+}
