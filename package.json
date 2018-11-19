@@ -20,8 +20,12 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@types/snapsvg": "^0.4.35",
     "core-js": "^2.5.4",
+    "imports-loader": "^0.8.0",
     "rxjs": "^6.0.0",
+    "snapsvg": "^0.5.1",
+    "snapsvg-cjs": "0.0.6",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

@@ -3,6 +3,8 @@ import { PropertyService } from './shared/services/property.service';
 import { Component } from '@angular/core';
 import { Property } from './shared/types/property.model';
 import { ImageEngineService } from './shared/services/image-engine.service';
+import "snapsvg-cjs";
+declare var Snap: any;
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,8 @@ export class AppComponent {
   }
 
   setActiveProperty(property: Property): void {
+    const s = Snap('#my-svg');
+  const c = s.circle(50, 50, 100);
     this.activeProperty = property;
   }
 

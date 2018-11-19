@@ -10,32 +10,34 @@
     </button>
   </section>
   <section class="image-section">
-      <!--<app-configured-image></app-configured-image>-->
+      <app-configured-image></app-configured-image>
   </section>
-</div>
-<section class="navigation-section">
-  <button 
-    class="next-button" 
-    *ngIf="activeProperty !== properties[0]"
-    (click)="previousProperty()"
-    >
-      Previous
-  </button>
-  <button 
-    class="next-button" 
-    *ngIf="activeProperty !== properties[properties.length - 1]"
-    (click)="nextProperty()"
-    >
-      Next
-  </button>
-</section>  
-<section class="progress-section">
+  <section class="navigation-section">
     <button 
-      class="progress-indicator"
-      *ngFor="let property of properties"
-      [ngClass]="{'active': activeProperty.name === property.name}"
-      (click)="setActiveProperty(property)"
+      class="next-button" 
+      *ngIf="activeProperty !== properties[0]"
+      (click)="previousProperty()"
       >
-      {{ property.displayName }}
+        Previous
     </button>
-  </section>
+    <button 
+      class="next-button" 
+      *ngIf="activeProperty !== properties[properties.length - 1]"
+      (click)="nextProperty()"
+      >
+        Next
+    </button>
+  </section>  
+  <section class="progress-section">
+      <button 
+        class="progress-indicator"
+        *ngFor="let property of properties"
+        [ngClass]="{'active': activeProperty.name === property.name}"
+        (click)="setActiveProperty(property)"
+        >
+        {{ property.displayName }}
+      </button>
+    </section>
+  </div>
+<svg id="my-svg"></svg>
+  
