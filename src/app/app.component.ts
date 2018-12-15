@@ -20,14 +20,18 @@ export class AppComponent {
       this.properties = properties;
       if (this.activeProperty === null) {
         this.activeProperty = properties[0];
+        this.activeProperty.value = this.activeProperty.options[0];
       }
-      this.imageEngineService.refreshImage();
+      this.imageEngineService.refreshImage(this.properties);
     });
   }
 
   setActiveProperty(property: Property): void {
-    const s = Snap('#my-svg');
-  const c = s.circle(50, 50, 100);
+    if (property.value === undefined) {
+      property.value = property.options[0];
+    }
+    // const s = Snap('#my-svg');
+    // const c = s.circle(50, 50, 100);
     this.activeProperty = property;
   }
 

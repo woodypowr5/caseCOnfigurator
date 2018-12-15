@@ -9,8 +9,8 @@ export class ImageEngineService {
 
   constructor() { }
 
-  refreshImage() {
-    console.log("running");
+  refreshImage(properties: Property[]) {
+    console.log(properties);
   }
 
   setPropertyValue(property: Property, value: Option) {

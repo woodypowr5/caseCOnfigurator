@@ -11,4 +11,8 @@ export class ConfiguredImageComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  doSomething(){
+    
+  }
 }
